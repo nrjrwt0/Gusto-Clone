@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    #logo{
+      height: 36px;
+    }
+    .menubar{
+      background: green;
+      text-align: center;
+    }
+    .menubar .main-ul{
+      display: flex;
+      list-style-type: none;
+    }
+    .menubar .main-ul .main-li{
+        width: 10%;
+        /* margin: 15px;
+        padding: 15px; */
+      }
+      .menubar .main-ul .main-li > a{
+      color: black;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 300;
+    }
+    .sebmenu ul{
+      list-style: none;
+      /* display: flex; */
+      border: 1px solid red;   
+    } 
+    .sebmenu{
+      display: none;
+    }
+   
+   
+    i {
+      border: solid black;
+      border-width: 0px 3px  3px 0px;
+      margin-left: 5px;
+      display: inline-block;
+      padding: 3px;
+      transform: rotate(45deg);
+    }
+
+    .main-li>a:hover > i{
+      transform: rotate(-135deg);
+      color: yellow;
+      /* display: block; */
+    }
+  </style>
+</head>
+<body>
+  <div id="main-conatiner">
+    <div id="wrapper">
+      <nav class="menubar">
+        <ul class="main-ul">
+          <li class="main-li">
+            <a href="google.com">
+            <img id="logo" src="faviocon.webp"></a>
+          </li>
+
+          <li class="main-li">
+            <a href="#">Why Gusto</a>
+          </li>
+
+          <li class="main-li">
+            <a href="#">Payroll and more <i></i></a>
+
+            <div class="sebmenu sebmenu-1">
+              <ul>
+                <li>
+                  <a href="#">Payroll</a>
+                  <p>Automatic deductions and filings, direct deposits, W-2s, and 1099s</p>
+                </li>
+
+                <li>
+                  <a href="#">Emoloyee benifits</a>
+                  <p>Health benefits, automatic savings, 401(k)s. and more</p>
+                </li>
+
+                <li>
+                  <a href="#">Hiring and onboarding</a>
+                  <p>Offer letters, checklists, software setup, and more</p>
+                </li>
+
+                <li>
+                  <a href="#">Time tools</a>
+                  <p>simple time tracking, time-off requests, and PTO policies</p>
+                </li>
+
+                <li>
+                  <a href="#">HR experts</a>
+                  <p>Direct access to certified HR professionals and other resources</p>
+                </li>
+
+                <li>
+                  <a href="#">Gusto Waller</a>
+                  <p>A free employee app for smart saving and spending</p>
+                </li>
+
+                <li>
+                  <a href="#">See demo</a>
+                 </li>
+
+                 <li>
+                  <a href="#">Integrations</a>
+                 </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="main-li">
+            <a href="#">Pricing</a>
+          </li>
+
+          <li class="main-li">
+            <a href="#">For Accountants <i></i></a>
+            <div class="sebmenu sebmenu-2">
+              <ul>
+
+              
+              <li>
+                <a href="#">Become a partner</a>
+                <p>Grow your accounting or bookkeeping practice</p>
+              </li>
+
+              <li>
+                <a href="#">People Advisory</a>
+                <p>Combine financial expertise with people-focused advising</p>
+              </li>
+
+              <li>
+                <a href="#">Gusto Pro</a>
+                <p>Save time with Gusto's modern accounting dashboard</p>
+              </li>
+
+              <li>
+                <a href="#">Certification</a>
+                <p>Earn an official People Advisory Certification</p>
+              </li>
+
+              <li>
+                <a href="#">Gusto partner blog</a>
+                <p>Get tools and advice for modern accountants</p>
+              </li>
+            </ul>
+            </div>
+          </li>
+
+          <li class="main-li">
+            <a href="#">Resources <i></i></a>
+            <div class="sebmenu sebmenu-3">
+              <ul>
+
+              
+              <li>
+                <a href="#">Calculators and tools</a>
+                <p>Tax calculations, checklists, compensation tools, and more</p>
+              </li>
+
+              <li>
+                <a href="#">Talk Shop blog</a>
+                <p>Expert articles and ansers to all your questions</p>
+              </li>
+
+              <li>
+                <a href="#">Help Center</a>
+                <p>Expert answer and how-to guides for using Gusto</p>
+              </li>
+
+              <li>
+                <a href="#">Small buisness guides</a>
+                <p>Simple steps to rin payroll, add benefits, and more </p>
+              </li>
+
+              <li>
+                <a href="#">Find an accountant</a>
+                <p>Browse accountants in our Partner Directory</p>
+              </li>
+
+              <li>
+                <a href="#">Find an accountant</a>
+                <p>Browse accountants in our Partner Directory</p>
+              </li>
+
+              <li>
+                <a href="#">COVID-19 Resource Hub</a>
+                <p>Information and advice for buisness navigating the crises</p>
+              </li>
+            </ul>
+            </div>
+          </li>
+
+          <li class="main-li">
+            <a href="#">Starting a Buisness</a>
+          </li>
+
+          <li class="main-li">
+            <a href="#">Need a new provider</a>
+          </li>
+
+          <li class="main-li">
+            <a href="#">&#128269</a>
+          </li>
+          
+          <li class="main-li">
+            <a href="#">sign in</a>
+          </li>
+        </ul>
+        
+        
+      </nav>
+    </div>
+  </div>
+  <!-- <img src="https://prod.gusto-assets.com/assets/homepage/hp-stems-brooklyn-085772ab7bf026c0c20c40de82c7c5ecf0fb01e63755f84f033cee949b87c93a.jpg"> -->
+</body>
+</html>
