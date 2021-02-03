@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+
     *{
       margin: 0px;
       padding: 0px;
@@ -12,70 +13,216 @@
     }
     #logo{
       height: 36px;
+      /* border: 1px solid red; */
     }
-    .menubar{
-      background: green;
+    #navbar{
+      /* border: 1px solid red; */
+      padding: 20px 25px 14px;
+      /* background: green; */
       text-align: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 80px;
+      background-color: white;
+      
     }
-    .menubar .main-ul{
+    #navbar .main-ul{
+      /* border: 1px solid red; */
       display: flex;
       list-style-type: none;
+     
     }
-    .menubar .main-ul .main-li{
-        width: 10%;
+    #navbar .main-ul .main-li:first-child{
+      width: 10%;
+    }
+    #navbar .main-ul .main-li{
+        width: 14%;
+        /* border: 1px solid red; */
+        padding-top: 6px;
         /* margin: 15px;
         padding: 15px; */
       }
-      .menubar .main-ul .main-li > a{
+      #navbar .main-ul > .nav-pricing, #navbar .main-ul > .nav-resource{
+        width: 10%;
+      }
+      #navbar .main-ul .main-li > a{
       color: black;
       text-decoration: none;
       font-size: 18px;
       font-weight: 300;
     }
+    #navbar .main-ul > .blue-text > a{
+        color: #2BABAE;  
+      }
+    #navbar .main-ul .main-li > a:hover{
+      color: #0B8180;
+      padding: 25px 0px 30px 0;
+      height: 100%;
+      /* background-color: red; */
+    }
     .sebmenu ul{
       list-style: none;
       /* display: flex; */
-      border: 1px solid red;   
+      height: 320px;
+      /* border: 1px solid red;    */
     } 
     .sebmenu{
+      transition: 1s ease-in;
       display: none;
     }
-   
-   
+    .main-li:hover > .sebmenu{
+      display: block;
+     
+      position: absolute;
+      margin-top:28px;
+      background-color: white;
+    }
+    .main-li>a:hover + .sebmenu{
+      display: block;
+      
+    }
+    .sebmenu > ul{
+      width: 540px;
+      padding: 20px;
+      /* border: 1px solid red; */
+      box-shadow: 3px 3px 3px 3px #F8F5F2;
+      display: grid;
+      grid-template-columns: 49% 49%;
+      gap: 2%;
+      text-align: left;
+      font-size: 18px;
+      word-spacing:2px;
+      line-height: 1.5;
+    }
+    .sebmenu > ul > li{
+      padding-bottom: 5px;
+      border-bottom: 1px solid silver;
+    }
+    .sebmenu > ul > li:last-child{
+      border-bottom: none;
+    }
+    .sebmenu > ul p{
+      font-size: 16px;
+      font-weight: 200;
+    }
+    .sebmenu > ul > .center-text-payroll{
+      text-align: center;
+      background-color: #F8F5F2;
+      
+      border: none;
+    }
+    .sebmenu > ul > li > a{
+      color: #0B8180;
+      text-decoration: none;
+    }
     i {
       border: solid black;
-      border-width: 0px 3px  3px 0px;
-      margin-left: 5px;
+      border-width: 0px 2px  2px 0px;
+      margin-left: 8px;
+      margin-bottom: 2px;
       display: inline-block;
       padding: 3px;
       transform: rotate(45deg);
     }
-
-    .main-li>a:hover > i{
-      transform: rotate(-135deg);
-      color: yellow;
-      /* display: block; */
+    .blue-text{
+      color: #0B8180;
+      /* background-color: red; */
     }
+    
+    .main-li:hover > a > i{
+      transform: rotate(-135deg);
+      transition: 0.3s ease-in;
+    }
+    .signin-btn{
+      /* border: 1px solid red; */
+      padding: 8px 18px;
+      margin-left: 10px;
+      background-color:#f8f5f2b9;
+    }
+    .navbar .main-ul .main-li > .signin-btn:hover{
+      /* border: 1px solid red; */
+      padding: 8px 18px;
+      margin-left: 10px;
+      background-color: #F8F5F2;
+    }
+    #mid-cont{
+      position: relative;
+      top: 80px;
+      z-index: -2;
+      max-width: 100vw;
+      /* border: 1px solid red; */
+    }
+    #img-cont {
+      /* z-index: -1; */
+    }
+    #img-cont > img{
+      max-width: 100%;
+      
+    }
+    #mid-cont-box{
+      width: 44%;
+      height: 440px;
+      position: absolute;
+      top: 40px;
+      left: 80px;
+      padding: 50px;
+      background-color: white;
+      color: black;
+      z-index: 2;
+      border-radius: 5px;
+      z-index: 2;
+    }
+    #mid-cont-box > h1{
+      font-size: 50px;
+      line-height: 60px;
+      letter-spacing: -0.3px;
+      margin-bottom: 16px;
+    }
+    #mid-cont-box > p{
+      font-size: 20px;
+      font-weight: 200;
+      line-height: 24px;
+    }
+    #mid-cont-box > button{
+      width: 100%;
+      margin: 18px 0px;
+      padding: 17px;
+      background-color: #F35D48;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      color: white;
+    }
+    #mid-cont-box > button:hover{
+      background-color: #f35c48c0;
+      background-color: grey;
+    }
+    #mid-cont-box > button + p{
+      font-size: 19px;
+      text-align: center;
+    }
+
   </style>
 </head>
 <body>
   <div id="main-conatiner">
     <div id="wrapper">
-      <nav class="menubar">
+      <nav id="navbar">
         <ul class="main-ul">
           <li class="main-li">
-            <a href="google.com">
-            <img id="logo" src="faviocon.webp"></a>
+            <a href="#">
+            <img id="logo" src="https://prod.gusto-assets.com/assets/svg/header/gusto-logo-bfed4fde4bd2b5dd364ab0e58f77fc90aeefa2f1ecdb7fff524279642e23f9c2.svg"></a>
           </li>
 
           <li class="main-li">
-            <a href="#">Why Gusto</a>
+            <a class="hover" href="#">Why Gusto</a>
           </li>
 
           <li class="main-li">
             <a href="#">Payroll and more <i></i></a>
 
-            <div class="sebmenu sebmenu-1">
+            <div class="sebmenu">
               <ul>
                 <li>
                   <a href="#">Payroll</a>
@@ -107,24 +254,24 @@
                   <p>A free employee app for smart saving and spending</p>
                 </li>
 
-                <li>
-                  <a href="#">See demo</a>
+                <li class="center-text-payroll">
+                  <a href="#" >See demo</a>
                  </li>
 
-                 <li>
-                  <a href="#">Integrations</a>
+                 <li class="center-text-payroll">
+                  <a href="#" >Integrations</a>
                  </li>
               </ul>
             </div>
           </li>
 
-          <li class="main-li">
-            <a href="#">Pricing</a>
+          <li class="main-li nav-pricing">
+            <a href="price.html">Pricing</a>
           </li>
 
           <li class="main-li">
             <a href="#">For Accountants <i></i></a>
-            <div class="sebmenu sebmenu-2">
+            <div class="sebmenu">
               <ul>
 
               
@@ -156,9 +303,9 @@
             </div>
           </li>
 
-          <li class="main-li">
+          <li class="main-li nav-resource">
             <a href="#">Resources <i></i></a>
-            <div class="sebmenu sebmenu-3">
+            <div class="sebmenu">
               <ul>
 
               
@@ -188,11 +335,6 @@
               </li>
 
               <li>
-                <a href="#">Find an accountant</a>
-                <p>Browse accountants in our Partner Directory</p>
-              </li>
-
-              <li>
                 <a href="#">COVID-19 Resource Hub</a>
                 <p>Information and advice for buisness navigating the crises</p>
               </li>
@@ -200,27 +342,47 @@
             </div>
           </li>
 
-          <li class="main-li">
-            <a href="#">Starting a Buisness</a>
+          <li class="main-li blue-text">
+            <a href="#">Starting a Buisness?</a>
           </li>
 
-          <li class="main-li">
-            <a href="#">Need a new provider</a>
-          </li>
-
-          <li class="main-li">
-            <a href="#">&#128269</a>
+          <li class="main-li blue-text">
+            <a href="#">Need a new provider?</a>
           </li>
           
           <li class="main-li">
-            <a href="#">sign in</a>
+            <a href="#">&#128269</a>
+            <a href="#" class="signin-btn">sign in</a>
           </li>
         </ul>
         
-        
       </nav>
+
+
+      <div id="mid-cont">
+        <div id="img-cont">
+          <img src="https://prod.gusto-assets.com/assets/homepage/hp-stems-brooklyn-085772ab7bf026c0c20c40de82c7c5ecf0fb01e63755f84f033cee949b87c93a.jpg">
+        </div>
+
+        <div id="mid-cont-box">
+          <h1>
+            Supporting small businesses through the ups and downs.
+          </h1>
+          <p>Interested in easy, modern payroll and benefits? Start with a few questions about your business.</p>
+          <button>Get Started</button>
+          <p>Does your company use Gusto today? <a href="#"> Sign in here.</a></p>
+        </div>
+      </div>
+      
+
+
     </div>
   </div>
-  <!-- <img src="https://prod.gusto-assets.com/assets/homepage/hp-stems-brooklyn-085772ab7bf026c0c20c40de82c7c5ecf0fb01e63755f84f033cee949b87c93a.jpg"> -->
+
+  
+  
+  <script>
+    
+  </script>
 </body>
 </html>
