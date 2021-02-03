@@ -1,0 +1,152 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #f8f5f2;
+}
+#price-heading{
+    width: 100%;
+    height: 40vh;
+    background-color: #f8f5f2;
+    font-family: "Segoe UI";
+
+}
+.center{
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.large-font {
+    font-size:1.2em;
+    margin: 5%;
+
+}
+.medium-font {
+    font-size: 1em;
+    margin-bottom:25%;
+    margin-left:5%;
+
+}
+.large-heading {
+    font-size: 3.5vw;
+}
+
+
+#plans-container {
+    width: 90%;
+    /* border: 2px solid red; */
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    gap: 2%;
+    height: 280vh;
+
+}
+
+
+#plans-container > div {
+    background-color: white;
+    padding: 2%;
+    font-size: 1.5em;
+    flex-basis: 20%;
+    /* min-width:20%; */
+    flex-wrap: wrap;
+    height: 260vh;
+ 
+}
+
+#plans-container > div:nth-child(3) {
+    height: 258.5vh;
+}
+
+/* top margin for plan boxes */
+.plans-cont-margin {    
+    margin-top:2.5%;
+}
+
+.margin-top {
+    margin-top: 14%;
+}
+.margin-all {
+    margin:1% 0% 5% 5%;
+
+}
+.red {
+    color: #ff7332;
+    font-weight: bold;
+}
+.margin {
+    margin-bottom: 10%;
+}
+
+.line {
+    width: 100%;
+    height: 0.1vh;
+    background-color:lightgrey;
+    margin:1vh 0vh 2vh 0vh;
+}
+#get-started {
+    font-size: 1em;
+    padding: 5% 8% 5% 8%;
+    border-radius: 5%;
+    background-color: #ef523c;
+    color: white;
+    margin:2% 1% 5% 1%;
+
+}
+
+.recommended {
+    border-top: 6vh solid teal;
+    border-top-left-radius: 1%;
+    border-top-right-radius: 1%;
+    border-left: 0.2vw solid teal;
+    border-right: 0.2vw solid teal;
+    border-bottom: 0.2vw solid teal;
+}
+
+#plans-container  ul {
+    list-style: none;
+  }
+
+#plans-container ul > li {
+      font-size: 1em;
+      line-height: 7vh;
+  }
+#plans-container ul li:before {
+    content: '✓ ';
+    color: rgb(0, 139, 23);
+
+  }
+
+#compare-cont > a{
+    text-align: center;
+}
+
+
+/* Media QUERY */
+
+@media(max-width:968px) {
+    #page-heading {
+        color: red;
+    }
+
+    #plans-container {
+        width: 90%;
+        display: flex;
+        margin: auto;
+        justify-content: space-around;
+        gap: 2%;
+        flex-wrap: wrap;
+
+    
+    }
+    
+    #plans-container > div {
+        background-color: white;
+        padding: 2%;
+        font-size: 3.5vh;
+        flex-basis:80%;
+    }
+}
