@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>The All-In-One People Platform for Payroll, Benefits, HR</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
   <style>
 
     *{
@@ -25,7 +26,7 @@
       width: 100%;
       height: 80px;
       background-color: white;
-      
+      z-index: 100;
     }
     #navbar .main-ul{
       /* border: 1px solid red; */
@@ -40,8 +41,7 @@
         width: 14%;
         /* border: 1px solid red; */
         padding-top: 6px;
-        /* margin: 15px;
-        padding: 15px; */
+
       }
       #navbar .main-ul > .nav-pricing, #navbar .main-ul > .nav-resource{
         width: 10%;
@@ -50,6 +50,7 @@
       color: black;
       text-decoration: none;
       font-size: 18px;
+      padding: 25px 0px 30px 0;
       font-weight: 300;
     }
     #navbar .main-ul > .blue-text > a{
@@ -57,7 +58,7 @@
       }
     #navbar .main-ul .main-li > a:hover{
       color: #0B8180;
-      padding: 25px 0px 30px 0;
+      
       height: 100%;
       /* background-color: red; */
     }
@@ -68,7 +69,6 @@
       /* border: 1px solid red;    */
     } 
     .sebmenu{
-      transition: 1s ease-in;
       display: none;
     }
     .main-li:hover > .sebmenu{
@@ -80,7 +80,7 @@
     }
     .main-li>a:hover + .sebmenu{
       display: block;
-      
+      transition: 2s ease-in;
     }
     .sebmenu > ul{
       width: 540px;
@@ -116,7 +116,7 @@
       color: #0B8180;
       text-decoration: none;
     }
-    i {
+    .main-li i {
       border: solid black;
       border-width: 0px 2px  2px 0px;
       margin-left: 8px;
@@ -125,84 +125,259 @@
       padding: 3px;
       transform: rotate(45deg);
     }
-    .blue-text{
-      color: #0B8180;
-      /* background-color: red; */
-    }
+    
     
     .main-li:hover > a > i{
       transform: rotate(-135deg);
       transition: 0.3s ease-in;
     }
-    .signin-btn{
+    #navbar .main-ul .main-li >.signin-btn{
       /* border: 1px solid red; */
       padding: 8px 18px;
       margin-left: 10px;
       background-color:#f8f5f2b9;
+      /* color: ; */
     }
-    .navbar .main-ul .main-li > .signin-btn:hover{
+    .main-li > .signin-btn:hover{
       /* border: 1px solid red; */
-      padding: 8px 18px;
-      margin-left: 10px;
-      background-color: #F8F5F2;
+      background-color: #f8f5f2c9;
     }
-    #mid-cont{
+    #img-mid-cont{
       position: relative;
       top: 80px;
-      z-index: -2;
       max-width: 100vw;
+      max-height: 125vh;
+      height: 125vh;
+      background-image: url("https://prod.gusto-assets.com/assets/homepage/hp-stems-brooklyn-085772ab7bf026c0c20c40de82c7c5ecf0fb01e63755f84f033cee949b87c93a.jpg");
       /* border: 1px solid red; */
-    }
-    #img-cont {
-      /* z-index: -1; */
-    }
-    #img-cont > img{
-      max-width: 100%;
-      
     }
     #mid-cont-box{
       width: 44%;
-      height: 440px;
+      min-width: 44%;
+      min-height: 420px;
       position: absolute;
-      top: 40px;
-      left: 80px;
+      top: 50px;
+      left: 80px; 
       padding: 50px;
       background-color: white;
       color: black;
-      z-index: 2;
-      border-radius: 5px;
-      z-index: 2;
+      border-radius: 10px;
+      z-index: 60;
+      outline: none;
     }
     #mid-cont-box > h1{
       font-size: 50px;
-      line-height: 60px;
+      font-weight: 550;
+      line-height: 1.2;
       letter-spacing: -0.3px;
-      margin-bottom: 16px;
+      margin-bottom: 11px;
+      /* margin-top: 4px; */
     }
     #mid-cont-box > p{
       font-size: 20px;
       font-weight: 200;
-      line-height: 24px;
+      line-height: 28px;
     }
-    #mid-cont-box > button{
+    #mid-cont-box a{
+      color: #0B8180;
+     /* text-decoration: none; */
+    }
+    #mid-cont-box  button{
       width: 100%;
-      margin: 18px 0px;
+      margin: 18px 0px 10px;
       padding: 17px;
       background-color: #F35D48;
       border: none;
       border-radius: 8px;
       font-size: 16px;
       color: white;
+      outline: none;
     }
+    #mid-cont-box > button > img{
+      height:12px;
+      margin-right: 8px;
+      /* margin-top:10px */
+    }
+    
     #mid-cont-box > button:hover{
-      background-color: #f35c48c0;
-      background-color: grey;
+      background-color: #f34848f8;;
     }
     #mid-cont-box > button + p{
+      margin-top: 18px;
       font-size: 19px;
       text-align: center;
     }
+    #mid-cont-box > input{
+      width: 100%;
+      margin: 18px 0px 10px;
+      padding: 15px;
+      font-size: 15px;
+      border:0.6px solid silver;
+      outline-color: #0B8180;
+    }
+    #mid-cont-box > div {
+      text-align: center;
+      font-size: 18px;
+      margin: 8px 0px;
+    }
+    #mid-cont-box > div:last-child{
+      color: rgb(172, 169, 169);
+      font-weight: 500;
+    }
 
+    #mid-why-gusto{
+      margin-top: 80px;
+      padding-top: 80px;
+      text-align: center;
+      background-color: #F8F5F2;
+    }
+    #mid-why-gusto > h1{
+      font-size: 40px;
+      line-height: 1.2;
+    }
+    #mid-why-gusto > p{
+      font-size: 18px;
+      color: #0B8180;
+      margin-top: 20px;
+    }
+    #why-gusto-icons{
+      display: flex;
+      width: 60%;
+      margin: auto;
+      margin-top: 90px;
+      margin-bottom: 60px;
+      flex-basis: 16.5%;
+    }
+    #why-gusto-icons img{
+      width: 50px;
+      margin-bottom: 6px;
+    }
+    #why-gusto-icons p{
+      font-size: 18px;
+    }
+    #why-gusto-mid-img{
+      width: 700px;
+      margin: auto;
+    }
+    #why-gusto-mid-img > img{
+      max-width: 100%;
+    }
+
+    #get-started-div{
+      /* border: 1px solid red; */
+      text-align: center;
+      padding: 130px 10px;
+    }
+    #get-started-div > p{
+      color:  #F35D48;
+      font-size: 18px;
+      font-weight: 300;
+    }
+    #get-started-div > h1{
+      font-size: 44px;
+      margin: 30px 0px;
+    }
+    #get-started-div > button{
+      background-color: #F35D48;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 8px;
+      padding: 16px 32px;
+    }
+
+
+    #last-div{
+      width: 86%;
+      /* border: 1px solid red; */
+      margin: auto;
+      padding: 28px 0px 58px;
+      display: grid;
+      grid-template-columns: 22% 22% 22% 24% ;
+      gap: 3.25%;
+    }
+    #last-div > .talk-shop{
+      margin-bottom: -28px;
+    }
+    #last-div > #line {
+      grid-column-start: 2;
+      height: 10px;
+      margin-left: 40px;
+      grid-column-end: 5;
+      /* background-color: red; */
+      border-bottom: 0.05rem solid black;
+    }
+    #last-div > div{
+      margin-bottom: 15px;
+      /* border: 1px solid red; */
+    }
+    
+    #last-div  h3{
+      font-size: 19px;
+      margin-bottom: 15px;
+      font-weight: 600;
+      color: #232626;
+    }
+    #last-div  h4{
+      font-size: 19px;
+      font-weight: 500;
+      
+    }
+    #last-div  a{
+      display: block;
+      text-decoration: none;
+      color: #232626d7;
+      font-size: 18px;
+      font-weight: 200;
+      margin: 2px 0px 11px;
+    }
+    #last-div  a:hover{
+      color: #0B8180;
+    }
+
+    #last-div .red-text{
+      color:  #F35D48;
+      font-weight: 500; 
+      
+    }
+    .light-color-text{
+      font-size: 17px;
+      font-weight: 300;
+    }
+    .blue-text{
+      color: #0B8180;
+    }
+
+    footer{
+      /* border: 1px solid red; */
+      width: 86%;
+      margin: 60px auto 80px;
+      color: silver;
+    }
+    footer > span:first-child{
+      font-size: 19px;
+      font-weight: 500;
+      color: rgba(88, 83, 83, 0.753);
+    }
+    footer > a{
+      margin: 0px 10px;
+      font-size: 17px;
+      text-decoration: none;
+      color: silver;
+      /* color: #232626d7; */
+    }
+    footer  a:hover{
+      color: #0B8180;
+    }
+    #social-media-icons{
+      margin-left: 100px;
+
+    }
+    #social-media-icons > a{
+      text-decoration: none;
+      color: silver;
+      margin: 0px 15px;
+    }
   </style>
 </head>
 <body>
@@ -286,7 +461,7 @@
               </li>
 
               <li>
-                <a href="#">Gusto Pro</a>
+                <a href="gusto-pro.html">Gusto Pro</a>
                 <p>Save time with Gusto's modern accounting dashboard</p>
               </li>
 
@@ -358,31 +533,365 @@
         
       </nav>
 
-
-      <div id="mid-cont">
-        <div id="img-cont">
-          <img src="https://prod.gusto-assets.com/assets/homepage/hp-stems-brooklyn-085772ab7bf026c0c20c40de82c7c5ecf0fb01e63755f84f033cee949b87c93a.jpg">
-        </div>
-
+      <div id="img-mid-cont">
         <div id="mid-cont-box">
           <h1>
             Supporting small businesses through the ups and downs.
           </h1>
           <p>Interested in easy, modern payroll and benefits? Start with a few questions about your business.</p>
-          <button>Get Started</button>
+          <button id="get-started-btn">Get Started</button>
           <p>Does your company use Gusto today? <a href="#"> Sign in here.</a></p>
         </div>
+      </div>  
+
+      <div id="mid-why-gusto">
+        <h1>
+          This isn’t an easy time to run a
+          <br>
+           business. But we’re here to help.
+        </h1>
+        <p>Why Gusto</p>
+        <div id="why-gusto-icons">
+          <div>
+            <div>
+              <img src="images/full-service.webp" alt="">
+            </div>
+            <p>Full-service payroll</p>
+          </div>
+
+          <div>
+            <div>
+              <img src="images/medical.png.webp" alt="">
+            </div>
+            <p>Medical, dental, vision</p>
+          </div>
+
+          <div>
+            <div>
+              <img src="images/certified.webp" alt="">
+            </div>
+            <p>Certified HR experts</p>
+          </div>
+
+          <div>
+            <div>
+              <img src="images/time.webp" alt="">
+            </div>
+            <p>Time tracking</p>
+          </div>
+
+          <div>
+            <div>
+              <img src="images/hiring.webp" alt="">
+            </div>
+            <p>Hiring and onboarding</p>
+          </div>
+
+          <div>
+            <div>
+              <img src="images/employee.webp" alt="">
+            </div>
+            <p>Employee finance tools</p>
+          </div>
+        </div>
+
+        <div id="why-gusto-mid-img">
+          <img src="images/mid.webp">
+        </div>
       </div>
-      
 
+      <div id="get-started-div">
+        <p>
+          Prices now start at just $25/month*
+        </p>
+        <h1>
+          Join more than 100,000
+          <br>
+          small businesses and their teams.
+        </h1>
 
+        <button>Get started</button>
+      </div>
+
+      <div id="last-div">
+        <div>
+          <h3>Built for you</h3>
+          <h4 class="blue-text">Starting a buisness</h4>
+          <a href="#">Set your new business up with modern payroll, benefits, and HR</a>
+          
+          <h4 class="blue-text">Need a new provider?</h4>
+          <a href="#">Transfer your payroll, benefits, and HR from another provider</a>
+
+          <h4 class="blue-text">For accountants</h4>
+          <a href="#">A rewards program for accountants and bookkeepers</a>
+
+          <h4 class="blue-text">Pricing</h4>
+          <a href="#">Starting at just <span class="red-text">$25</span> per month*</a>
+
+          <a href="#">*Price of the Basic plan beta program. Terms and conditions apply.</a>
+        </div>
+
+        <div>
+          <h3>All-in-one platform</h3>
+          <a href="#">Payroll</a>
+          <a href="#">Employee benefits</a>
+          <a href="#">Health insurance</a>
+          <a href="#">Financial benefits</a>
+          <a href="#">Hiring and onboarding</a>
+          <a href="#">Expert HR</a>
+          <a href="#">Time tracking tools</a>
+          <a href="#">Workers' comp</a>
+          <a href="#">Integrations</a>
+          <a href="#">Gusto Wallet</a>
+          <a href="#">Gusto Partner Offers</a>
+        </div>
+
+        <div>
+          <h3>Tools</h3>
+          <a href="#">Small Business Financial Relief</a>
+          <a href="#">Employer tax calculator</a>
+          <a href="#">Burn rate calculator</a>
+          <a href="#">Salary comparison tool</a>
+          <a href="#">New hire checklist</a>
+          <a href="#">Small business guides</a>
+        </div>
+        <div>
+          <h3>About Gusto</h3>
+          <a href="#">About</a>
+          <a href="#">Careers — We're hiring!</a>
+          <a href="#">Press</a>
+          <a href="#">Contact</a>
+          <a href="#">Investors</a>
+          <a href="#">Affiliate program</a>
+        </div>
+
+        <div>
+          <h3>For Accountants</h3>
+          <a href="#">Become a partner</a>
+          <a href="#">People Advisory</a>
+          <a href="#">Certification</a>
+          <a href="#">Gusto Pro</a>
+          <a href="#">Gusto partner blog</a>
+        </div>
+
+        <div>
+          <h3>Resources</h3>
+          <a href="#">Interactive demo</a>
+          <a href="#">Compare</a>
+          <a href="#">Find an accountant</a>
+          <a href="#">Help Center</a>
+          <a href="#">FAQs</a>
+          <a href="#">Customer Stories</a>
+        </div>
+
+        <div>
+          <h3>Contact us</h3>
+          <a href="#">Talk to sales — <span class="blue-text">(800) 936-0383</span></a>
+          <a href="#">Talk to support — <span class="blue-text">Sign in</span></a>
+        </div>
+
+        <div>
+          <h3>Licenses</h3>
+          <a href="#">Gusto Capital, LLC NMLS ID: <span class="blue-text">1845463</span> </a>
+          <a href="#">ZenPayroll, Inc. NMLS ID: <span class="blue-text">1737896</span> </a>
+        </div>
+
+        <div class="talk-shop">
+          <h3>Talk Shop: <span class="light-color-text"> Small business resources</span></h3>
+        </div>
+
+        <div id="line" class="talk-shop">
+
+        </div>
+
+        <div>
+          <a href="#" class="blue-text">Talk Shop blog</a>
+          <a href="#">Advice and information for small businesses and their teams</a>
+        </div>
+
+         <div>
+           <a href="#">Running payroll</a>
+           <a href="#">Employee benefits</a>
+           <a href="#">Health insurance</a>
+           <a href="#">People management</a>
+         </div>
+
+         <div>
+          <a href="#">Workers' comp</a>
+          <a href="#">Starting a business</a>
+          <a href="#">Business finances</a>
+        </div>
+
+        <div>
+          <a href="#">Hiring</a>
+          <a href="#"> Growth</a>
+          <a href="#">Taxes</a>
+        </div>
+      </div>
+
+      <footer>
+        <span>Gusto </span> <span> © 2021</span>
+        <a href="#">Brokers</a>
+        <a href="#">Privacy</a>
+        <a href="#">Licenses</a>
+        <a href="#">Site map</a>
+
+        <span id="social-media-icons">
+          <a href=""><i class="fab fa-facebook-f"></i></a>
+          <a href=""><i class="fab fa-twitter"></i></a>
+          <a href=""><i class="fab fa-linkedin-in"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+        </span>
+        
+      </footer>
     </div>
   </div>
-
-  
   
   <script>
-    
+      var midContBox = document.getElementById("mid-cont-box");
+      var getStartedBtn = document.getElementById("get-started-btn");
+      var midContBoxH1 = midContBox.querySelector("h1");
+      var midContBoxP = midContBox.querySelectorAll("p");
+
+
+      var stepCounter = 1;
+
+
+
+      function getStartedBtnClick(event){
+        var int = document.getElementById('step');
+        if(int != null){
+            int.remove();
+        }
+        var allBtns = document.querySelectorAll("button");
+        //Adding Elements
+        var stepCounterP = document.createElement("p");
+        stepCounterP.setAttribute('id','step')
+        var btn1 = document.createElement("button");
+        var btn2 = document.createElement("button");
+        var btn3 = document.createElement("button");
+
+
+        // document.getElementById('step').remove();
+        midContBox.insertBefore(stepCounterP,midContBoxH1);
+        stepCounterP.textContent = "Step " + stepCounter + " of 5";
+
+        //Adding style
+        midContBoxH1.style.fontSize = "46px";
+        midContBoxH1.style.fontWeight = "400";
+        btn1.style.backgroundColor = "#0B8180";
+        btn2.style.backgroundColor = "#0B8180";
+        btn3.style.backgroundColor = "#0B8180";
+
+        //Removing Element whuch are present in container so we can add new btns
+        getStartedBtn.remove();
+        midContBoxP.forEach(function(el){
+          el.remove();
+        })
+         //Removing buttons
+         allBtns.forEach(function(el){
+            el.remove();
+          })
+
+        if(stepCounter == 1){
+          midContBoxH1.textContent = "Have you run payroll yet this calendar year?";
+          btn1.textContent = "Yes";
+          btn2.textContent = "No";
+
+          midContBox.appendChild(btn1);
+          midContBox.appendChild(btn2);
+
+        } else if(stepCounter == 2){
+          //Adding style and content
+          midContBoxH1.textContent = "How do you currently run payroll?";
+          btn1.textContent = "We’re new to running payroll";
+          btn2.textContent = "We use another online payroll software";
+          btn3.textContent = "We do it ourselves manually";
+          midContBox.appendChild(btn1);
+          midContBox.appendChild(btn2);
+          midContBox.appendChild(btn3);
+
+        } else if(stepCounter == 3){
+          //Adding style and content
+          midContBoxH1.textContent = "How would you describe your business setting?";
+          btn1.textContent = "We work in an office";
+          btn2.textContent = "We work in retail or food service";
+          btn3.textContent = "We work in a factory, construction, or in the field";
+          midContBox.appendChild(btn1);
+          midContBox.appendChild(btn2);
+          midContBox.appendChild(btn3);
+        } else if(stepCounter == 4){
+          //Adding style and content
+          midContBoxH1.textContent = "What type of workers do you need to pay?";
+          btn1.textContent = "Employees (W-2s)";
+          btn2.textContent = "Contractors (1099s)";
+          btn3.textContent = "Both (W-2s & 1099s)";
+          midContBox.appendChild(btn1);
+          midContBox.appendChild(btn2);
+          midContBox.appendChild(btn3);
+
+        } else if(stepCounter == 5){
+          //Adding style and content
+          midContBoxH1.textContent = "Interested in offering health benefits to your team?";
+          btn1.textContent = "Yes";
+          btn2.textContent = "No";
+          midContBox.appendChild(btn1);
+          midContBox.appendChild(btn2);
+
+        } 
+
+        btn1.addEventListener('click', getStartedBtnClick);
+        btn2.addEventListener('click', getStartedBtnClick);
+        btn3.addEventListener('click', getStartedBtnClick);
+        
+        if(stepCounter > 5){
+          btn1.removeEventListener('click', getStartedBtnClick);
+          btn2.removeEventListener('click', getStartedBtnClick);
+
+          stepCounterP.remove()
+
+          //form
+          var inputName = document.createElement("input");
+          var inputEmail = document.createElement("input");
+
+          inputName.setAttribute('placeholder','Full Name');
+          inputEmail.setAttribute('placeholder','Work Email Address');
+
+          //below form
+          var div1 = document.createElement("div");
+          var div2 = document.createElement("div");
+
+          div1.innerHTML = `Already use Gusto? <a href ='#'>Sign in here.<a>`
+          div2.innerHTML = `By creating an account, you agree to the <a href ='#'>terms & conditions</a>, the <a href ='#'>payroll terms</a>, and <a href ='#'> our privacy policy.</a>`
+       
+          midContBoxH1.innerHTML = `Based on your response, Gusto could be a great fit for your business.`;
+          midContBoxH1.style.fontSize = "34px";
+          midContBoxH1.style.lineHeight = "43px";
+          midContBoxH1.style.fontWeight = "400";
+
+          btn1.innerHTML=`<img src="https://clipground.com/images/google-logo-clipart-transparent.png">Sign up with Google`;
+
+
+          btn2.textContent = "Get Started";
+          
+          btn1.style.color = "black";
+          btn1.style.backgroundColor = "#f8f5f2da";
+          btn2.style.backgroundColor = "#F35D48";
+          midContBox.appendChild(btn1);
+          midContBox.appendChild(inputName);
+          midContBox.appendChild(inputEmail);
+          midContBox.appendChild(btn2);
+
+          midContBox.appendChild(div1);
+          midContBox.appendChild(div2);
+          
+        }
+
+        stepCounter++;
+        
+      }
+     
+     getStartedBtn.addEventListener("click",getStartedBtnClick)
   </script>
 </body>
 </html>
