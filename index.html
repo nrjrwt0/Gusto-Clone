@@ -441,7 +441,7 @@
           </li>
 
           <li class="main-li nav-pricing">
-            <a href="price.html">Pricing</a>
+            <a href="updated-price.html">Pricing</a>
           </li>
 
           <li class="main-li">
@@ -759,18 +759,33 @@
 
 
       function getStartedBtnClick(event){
-        var int = document.getElementById('step');
-        if(int != null){
-            int.remove();
+        var steps = document.getElementById('step');
+        var back = document.getElementById('back');
+        console.log(back);
+
+        if(steps != null ){
+            steps.remove();
+            back.remove();
         }
         var allBtns = document.querySelectorAll("button");
         //Adding Elements
         var stepCounterP = document.createElement("p");
-        stepCounterP.setAttribute('id','step')
+        stepCounterP.setAttribute('id','step');
+
         var btn1 = document.createElement("button");
         var btn2 = document.createElement("button");
         var btn3 = document.createElement("button");
 
+        //back styling and attribute
+        var backP = document.createElement("a");
+        backP.setAttribute('id','back');
+        backP.setAttribute('href','#');
+        backP.innerText = "Back"
+        backP.style.textAlign = "left";
+        backP.style.display = "block";
+        backP.style.textDecoration = "none";
+        backP.style.fontSize = "18px";
+        backP.style.marginTop = "15px"
 
         // document.getElementById('step').remove();
         midContBox.insertBefore(stepCounterP,midContBoxH1);
@@ -801,6 +816,8 @@
           midContBox.appendChild(btn1);
           midContBox.appendChild(btn2);
 
+          midContBox.appendChild(backP);
+
         } else if(stepCounter == 2){
           //Adding style and content
           midContBoxH1.textContent = "How do you currently run payroll?";
@@ -811,6 +828,8 @@
           midContBox.appendChild(btn2);
           midContBox.appendChild(btn3);
 
+          midContBox.appendChild(backP);
+
         } else if(stepCounter == 3){
           //Adding style and content
           midContBoxH1.textContent = "How would you describe your business setting?";
@@ -820,6 +839,9 @@
           midContBox.appendChild(btn1);
           midContBox.appendChild(btn2);
           midContBox.appendChild(btn3);
+
+          midContBox.appendChild(backP);
+
         } else if(stepCounter == 4){
           //Adding style and content
           midContBoxH1.textContent = "What type of workers do you need to pay?";
@@ -830,6 +852,8 @@
           midContBox.appendChild(btn2);
           midContBox.appendChild(btn3);
 
+          midContBox.appendChild(backP);
+
         } else if(stepCounter == 5){
           //Adding style and content
           midContBoxH1.textContent = "Interested in offering health benefits to your team?";
@@ -837,6 +861,8 @@
           btn2.textContent = "No";
           midContBox.appendChild(btn1);
           midContBox.appendChild(btn2);
+
+          midContBox.appendChild(backP);
 
         } 
 
