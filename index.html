@@ -16,15 +16,36 @@
       height: 36px;
       /* border: 1px solid red; */
     }
+    #covid-msg{
+      background-color: #FFF2E0;
+      /* border: 1px solid red; */
+      margin:-20px -22px 5px;
+      padding: 14px 8px;
+    }
+    #covid-msg > p{
+      font-size: 18px;
+      display: inline;
+    }
+    #covid-msg  a{
+      text-decoration: none;
+      color:#0B8180 ;
+    }
+    #covid-msg > #cross{
+      float: right;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 17px;
+    }
     #navbar{
       /* border: 1px solid red; */
-      padding: 20px 25px 14px;
+      padding: 16px 25px 14px;
       /* background: green; */
       text-align: center;
       position: fixed;
       top: 0;
       width: 100%;
-      height: 80px;
+      height: 110px;
+      /* height: 60; */
       background-color: white;
       z-index: 100;
     }
@@ -63,9 +84,9 @@
       /* background-color: red; */
     }
     .sebmenu ul{
-      list-style: none;
+      /* list-style: none; */
       /* display: flex; */
-      height: 320px;
+      /* height: 320px; */
       /* border: 1px solid red;    */
     } 
     .sebmenu{
@@ -83,10 +104,12 @@
       transition: 2s ease-in;
     }
     .sebmenu > ul{
+      list-style: none;
       width: 540px;
       padding: 20px;
       /* border: 1px solid red; */
-      box-shadow: 3px 3px 3px 3px #F8F5F2;
+      border:2px solid #f8f5f2b9;
+      /* box-shadow: 3px 3px 3px 3px #F8F5F2; */
       display: grid;
       grid-template-columns: 49% 49%;
       gap: 2%;
@@ -128,7 +151,7 @@
     
     
     .main-li:hover > a > i{
-      transform: rotate(-135deg);
+      transform: rotate(225deg);
       transition: 0.3s ease-in;
     }
     #navbar .main-ul .main-li >.signin-btn{
@@ -200,7 +223,7 @@
     }
     
     #mid-cont-box > button:hover{
-      background-color: #f34848f8;;
+      background-color: #f34848f8;
     }
     #mid-cont-box > button + p{
       margin-top: 18px;
@@ -285,7 +308,9 @@
       border-radius: 8px;
       padding: 16px 32px;
     }
-
+    #get-started-div > button:hover{
+      background-color: #f34848f8;
+    }
 
     #last-div{
       width: 86%;
@@ -384,6 +409,10 @@
   <div id="main-conatiner">
     <div id="wrapper">
       <nav id="navbar">
+        <div id="covid-msg">
+          <p>We're here for you. See what we're building for small businesses, at <a href="#">gusto.com/covid-19.</a></p>
+          <span id="cross">x</span>
+        </div>
         <ul class="main-ul">
           <li class="main-li">
             <a href="#">
@@ -748,6 +777,18 @@
   </div>
   
   <script>
+      var cross = document.getElementById("cross");
+      var covidMsg = document.getElementById("covid-msg");
+      var navBar = document.getElementById("navbar");
+      //Cross covid div
+      function removeCovidDiv(){
+        console.log("hurry")
+        covidMsg.style.display = "none"
+        navBar.style.maxHeight = "70px"
+        // navBar.style.border = "1px solid red"
+      }
+      cross.addEventListener('click', removeCovidDiv)
+
       var midContBox = document.getElementById("mid-cont-box");
       var getStartedBtn = document.getElementById("get-started-btn");
       var midContBoxH1 = midContBox.querySelector("h1");
@@ -756,16 +797,32 @@
 
       var stepCounter = 1;
 
+      function backToPrevPage(){
+        console.log(stepCounter);
+        if(stepCounter == 2){
+          stepCounter = stepCounter-1;
+          getStartedBtnClick();
+        }else{
+          stepCounter = stepCounter-2;
+          getStartedBtnClick();
+        }
+      }
+
 
 
       function getStartedBtnClick(event){
+        console.log("hurry");
         var steps = document.getElementById('step');
         var back = document.getElementById('back');
-        console.log(back);
+
 
         if(steps != null ){
+          console.log(steps);
+          console.log(back)
             steps.remove();
-            back.remove();
+            if(back != null){
+              back.remove();
+            }  
         }
         var allBtns = document.querySelectorAll("button");
         //Adding Elements
@@ -786,6 +843,8 @@
         backP.style.textDecoration = "none";
         backP.style.fontSize = "18px";
         backP.style.marginTop = "15px"
+
+        
 
         // document.getElementById('step').remove();
         midContBox.insertBefore(stepCounterP,midContBoxH1);
@@ -816,7 +875,7 @@
           midContBox.appendChild(btn1);
           midContBox.appendChild(btn2);
 
-          midContBox.appendChild(backP);
+          // midContBox.appendChild(backP);
 
         } else if(stepCounter == 2){
           //Adding style and content
@@ -865,7 +924,8 @@
           midContBox.appendChild(backP);
 
         } 
-
+        //Adding attribute in the back
+        backP.addEventListener('click',backToPrevPage)
         btn1.addEventListener('click', getStartedBtnClick);
         btn2.addEventListener('click', getStartedBtnClick);
         btn3.addEventListener('click', getStartedBtnClick);
