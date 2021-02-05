@@ -260,10 +260,9 @@
             </ul>
         </div>
     </div>
-
     <!-- middle container -->
     <div id="compare-cont">
-        <a href="">Compare plans and features</a>
+        <a href="" class="medium-font">Compare plans and features</a>
         <h1>Contractor</h1>
         <p>Haven't hired W-2 employees yet?</p>
         <p>We can help you pay your 1099 contractors for just $6 per person each month.</p>
@@ -363,25 +362,24 @@
     <div id="bottom-container">
         <div id="table-container">
             <h1>Compare features by any plan.</h1>
-            <table></table>
+            <table>
+            </table>
         </div>
         <div id="faq-container">
             <div id="faqs">
                 <h2>Pricing FAQs</h2>
-                <div class="big-text">Do I have to sign a long-term contract?</div>
-                <img src="https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronRight-512.png"
-                    id="icon">
-                <div id="answer1">Nope. Gusto is month-to-month. Cancel anytime.</div>
 
-                <div class="big-text">How do you bill for contractors?</div>
-                <img src="https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronRight-512.png"
-                    id="icon2">
-                <div id="answer2">Contractors are billed at the per person cost for any plan you select. We know you
-                    might not pay your contractors on a regular schedule, so we only bill you for contractors in months
-                    when you’ve paid them.
+                <div id="first-ques">
+                    <span class="big-text">Do I have to sign a long-term contract?</span>
+                    <div id="answer1">Nope. Gusto is month-to-month. Cancel anytime.</div>
                 </div>
+                <img src="https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronRight-512.png" id="icon">
+                <div id="second-ques">
+                    <span class="big-text">How do you bill for contractors?</span>
+                    <div id="answer2">Contractors are billed at the per person cost for any plan you select. We know you might not pay your contractors on a regular schedule, so we only bill you for contractors in months when you’ve paid them.</div>
+                </div>
+                <img src="https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronRight-512.png" id="icon2">
             </div>
-        </div>
     </div>
 
     <div id="last-div">
@@ -499,8 +497,9 @@
 
 </body>
 <script>
-    var arr = ["Unlimited payrolls", "All 50 states", "Multi-state payroll", "Payroll in any single state", "Tax filings and payments", "Next-day direct deposit"];
 
+    var arr = ["Unlimited payrolls", "All 50 states", "Multi-state payroll", "Payroll in any single state", "Tax filings and payments", "Next-day direct deposit"];
+    var new_table = ["2-day direct deposit", "4-day direct deposit", "State and Federal Unemployment Insurance", "W-2s and 1099s", "Garnishments", "Multiple pay rates and schedules", "Tip credits", "Direct deposit", "Paid-time-off policy tracking", "Holiday pay", "Time-off tracker & reporting", "Accounting integrations", "Time-tracking integrations", "State new hire reporting", "Payroll reports", "Payroll on AutoPilot®"];
     var table = document.getElementById('table-container');
     var contain = document.getElementById('table-container')
     var mainrow = document.createElement('tr');
@@ -547,24 +546,36 @@
         row.appendChild(td3);
         row.appendChild(td4);
         if (i == 5) {
-            row.style.opacity = "25%"
+            var opaRow = row;
+            // row.style.opacity = "25%"
+            opaRow.style.opacity = "25%"
+            // row.setAttribute('class',)
         }
         row.appendChild(td5);
         table.appendChild(row);
+
         // body.appendChild(table)
     }
+
+
+
     var btn = document.createElement('button');
     btn.textContent = "See all features"
     btn.setAttribute('class', 'btn-design')
+    btn.setAttribute('id', 'see-more')
     contain.appendChild(btn)
     count = 0;
     function displayFuntion() {
         count++;
         arrow.setAttribute('class', 'rotate')
         document.getElementById('answer1').style.display = "block";
+        document.getElementById('answer1').style.transition = "0.4s ease-in"
+        // document.getElementById('answer1').setAttribute('class','transition')
         if (count % 2 == 0) {
             arrow.removeAttribute('class')
             document.getElementById('answer1').style.display = "none";
+            arrow.setAttribute('class','rev-rotate')
+
         }
     }
     count = 0;
@@ -575,16 +586,72 @@
         if (count % 2 == 0) {
             arrow2.removeAttribute('class')
             document.getElementById('answer2').style.display = "none";
+            arrow2.setAttribute('class','rev-rotate')
+
         }
     }
+
     function tonormal() {
         arrow.setAttribute('class')
     }
 
     var arrow = document.getElementById('icon');
     var arrow2 = document.getElementById('icon2')
+    var ques1 = document.getElementById('first-ques');
+    var ques2 = document.getElementById('second-ques');
     arrow.addEventListener('click', displayFuntion)
     arrow2.addEventListener('click', displayFuntion2)
+    ques1.addEventListener('click',displayFuntion)
+    ques2.addEventListener('click',displayFuntion2)
+    var seeMoreBtn = document.getElementById('see-more');
+
+    function showLess() {
+        console.log(newtable.length)
+        newrow.style.display = 0;
+    }
+    function showMore() {
+        for (i = 0; i < new_table.length; i++) {
+            var newrow = document.createElement('tr');
+            var newtd1 = document.createElement('td')
+            var newtd2 = document.createElement('td')
+            var newtd3 = document.createElement('td')
+            var newtd4 = document.createElement('td')
+            var newtd5 = document.createElement('td')
+            newtd1.textContent = new_table[i];
+            newtd1.setAttribute('class', 'long')
+            newtd2.setAttribute('class', 'check-mark')
+            newtd3.setAttribute('class', 'check-mark')
+            newtd4.setAttribute('class', 'check-mark')
+            newtd5.setAttribute('class', 'check-mark')
+            if (i % 2 == 0) {
+                newrow.setAttribute('class', 'white')
+                
+            }
+            newrow.appendChild(newtd1);
+            newrow.appendChild(newtd2);
+            newrow.appendChild(newtd3);
+            newrow.appendChild(newtd4);
+            newrow.appendChild(newtd5);
+            table.appendChild(newrow);
+            opaRow.style.opacity = "100%"
+            seeMoreBtn.remove();
+        }
+        var removeBtn = document.createElement('button');
+        removeBtn.textContent = "See less"
+        removeBtn.setAttribute('id', 'showless')
+        removeBtn.setAttribute('class', 'btn-design')
+        var parent = document.getElementById('table-container');
+        parent.appendChild(removeBtn)
+        parent.addEventListener('click', showLess)
+    }
+
+    seeMoreBtn.addEventListener('click', showMore)
+        // removeBtnClick.addEventListener('click',showLess)
+
+
+
+
+
 
 </script>
 
