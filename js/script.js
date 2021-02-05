@@ -1,9 +1,11 @@
 //covid msg cross
-var cross = document.getElementById("cross");
-var searchAndSign = document.querySelector(".search-and-sign");
+      var cross = document.getElementById("cross");
+      var searchAndSign = document.querySelector(".search-and-sign");
       var covidMsg = document.getElementById("covid-msg");
       var navBar = document.getElementById("navbar");
 
+      console.log(covidMsg);
+      console.log(navBar);
       //Cross covid div
       function removeCovidDiv(){
         console.log("hurry")
@@ -11,9 +13,10 @@ var searchAndSign = document.querySelector(".search-and-sign");
         navBar.style.maxHeight = "70px"
         // navBar.style.border = "1px solid red"
         searchAndSign.style.top = "18px"
-        
       }
-      cross.addEventListener('click', removeCovidDiv)
+      console.log(cross)
+      cross.addEventListener('click',removeCovidDiv)
+
 
       var midContBox = document.getElementById("mid-cont-box");
       var getStartedBtn = document.getElementById("get-started-btn");
@@ -211,6 +214,7 @@ var searchAndSign = document.querySelector(".search-and-sign");
 
     
     var hamButton = document.getElementById("hamburger");
+    var ham = document.getElementById("ham");
     
     var mainul = document.querySelector(".main-ul") 
     var hamPresent = 0;
@@ -227,24 +231,28 @@ var searchAndSign = document.querySelector(".search-and-sign");
       }
     }
 
+    var hamClickCount = 1;
     function showNavBar(){
       document.body.scroll = "none";
-      if(hamPresent == 1){
+      if(hamPresent == 1 && hamClickCount % 2 == 1){
         mainul.style.display = "flex";
-        console.log("ham");
 
         navBar.style.height= "100vh";
+
+        ham.setAttribute('class','fas fa-times fa-2x');
+      } 
+      else{
+        console.log("hi")
+        mainul.style.display = "none";
+        navBar.style.height= "110px";
+
+        ham.setAttribute('class','fas fa-bars fa-2x');
       }
+      hamClickCount++;
     }
 
-
-    //hamburger cancel bnt
-
-
     window.addEventListener('resize', sizeOfWindow);
-     hamButton.addEventListener('click',showNavBar);
-     
-
+    hamButton.addEventListener('click',showNavBar);
 
 
   var clickItem = document.querySelectorAll(".main-li > a");
@@ -271,3 +279,5 @@ var searchAndSign = document.querySelector(".search-and-sign");
     el.addEventListener('click',clickOnNav);
   })
   
+
+ 

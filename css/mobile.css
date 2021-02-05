@@ -1,4 +1,28 @@
-@media(max-width:778px){
+@media(max-width:620px){
+  #why-gusto-icons{
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+#mid-cont-box{
+  padding: 20px;
+}
+#mid-cont-box > h1{
+  font-size: 24px;
+}
+#last-div{
+  width: 95%;
+}
+
+footer{
+ margin-top: 80px;
+}
+footer > span:first-child, footer > a{
+  display: inline-block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+}
+@media(max-width:768px){
   #mid-cont-box{
     min-width: 75%;    
   }
@@ -16,10 +40,17 @@
     font-weight: 200;
     line-height: 24px;
   }
+  #why-gusto-icons{
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+  }
   
 }
 @media(max-width:992px){
   #covid-msg{
+    display: none;
+  }
+  .nav2{
     display: none;
   }
   #mid-cont-box{
@@ -110,4 +141,11 @@
     right : 26px;
     top: 18px;
   }
-}
+  #why-gusto-mid-img{
+    margin: 40px auto 20px;
+  }
+  #why-gusto-mid-img > img{
+    max-width: 100%;
+  }
+
+}  
