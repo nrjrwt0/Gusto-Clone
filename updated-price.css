@@ -728,7 +728,20 @@ table tr:nth-child(3) td:nth-child(1) {
     display: block;
     width: 100%;
  }
+ tr:nth-child(10) td:nth-child(2), tr:nth-child(21) td:nth-child(2),tr:nth-child(22) td:nth-child(2),tr:nth-child(25) td:nth-child(2)  {
+    visibility: hidden;
+    display: block;
+    background-color:magenta;
+    width: 100%;
+ }
+tr {
+    font-size: 1.2em;
+}
 
+tr td:nth-child(1) {
+    padding-right: 50px;
+    /* background-color: royalblue; */
+}
 
 /* Media QUERY */
 
