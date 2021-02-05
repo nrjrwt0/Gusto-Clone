@@ -228,6 +228,7 @@ var searchAndSign = document.querySelector(".search-and-sign");
     }
 
     function showNavBar(){
+      document.body.scroll = "none";
       if(hamPresent == 1){
         mainul.style.display = "flex";
         console.log("ham");
@@ -237,6 +238,36 @@ var searchAndSign = document.querySelector(".search-and-sign");
     }
 
 
+    //hamburger cancel bnt
+
 
     window.addEventListener('resize', sizeOfWindow);
-     hamButton.addEventListener('click',showNavBar)
+     hamButton.addEventListener('click',showNavBar);
+     
+
+
+
+  var clickItem = document.querySelectorAll(".main-li > a");
+  // var sebmenu = document.querySelectorAll(" .sebmenu");
+  
+  var sebmenuCount = 0;
+
+  function clickOnNav(event){
+    console.log(event.target);
+    var sebmenu = event.target.parentNode.querySelector(" .sebmenu");
+    var arrow = event.target.parentNode.parentNode.querySelector("i")
+    console.log(sebmenu)
+    console.log(arrow)
+    if(sebmenuCount % 2 == 0){
+      sebmenu.style.display = "block";
+      arrow.style.transform= "rotate(225deg)"
+    } else{
+      sebmenu.style.display = "none";
+    }
+    sebmenuCount++;
+  }
+
+  clickItem.forEach(function(el){
+    el.addEventListener('click',clickOnNav);
+  })
+  

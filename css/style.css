@@ -4,15 +4,19 @@
       padding: 0px;
       box-sizing: border-box;
     }
+    #wrapper{
+      width: 100vw;
+    }
     #logo{
       height: 36px;
       /* border: 1px solid red; */
     }
+
     #covid-msg{
       background-color: #FFF2E0;
       /* border: 1px solid red; */
       margin:-20px -22px 5px;
-      padding: 14px 8px;
+      padding: 14px 9px;
     }
     #covid-msg > p{
       font-size: 18px;
@@ -425,7 +429,7 @@
       top: 13px;
       right:20px;
       /* float: right; */
-      border: 1px solid red;
+      /* border: 1px solid red; */
       margin-top: 5PX;
 
     }
