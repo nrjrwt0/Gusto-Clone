@@ -1,0 +1,79 @@
+@media(max-width:778px){
+  #mid-cont-box{
+    min-width: 75%;    
+  }
+
+  #mid-cont-box > h1{
+    font-size: 48px;
+    font-weight: 550;
+    line-height: 0.9;
+    letter-spacing: -0.3px;
+    margin-bottom: 18px;
+    /* margin-top: 4px; */
+  }
+  #mid-cont-box > p{
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 24px;
+  }
+  
+}
+@media(max-width:992px){
+  #hamburger{
+    display: block;
+  }
+  #navbar{
+    background-color: white;
+    border: 1px solid red;
+    padding: 0px;
+    z-index: 1000;
+    
+  }
+
+  #navbar .main-ul{
+    border: 1px solid blue;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    display: none;
+    overflow-y: scroll;
+  }
+
+  #navbar .main-ul .main-li{
+    width: 100%;
+    border: 1px solid green;
+    text-align: left;
+    padding:17px 20px;
+
+  }
+  #navbar .main-ul .main-li > a{
+    font-size: 30px;
+    
+  }
+  .main-li:hover > .sebmenu{
+    position: static;
+  }
+
+  .sebmenu > ul{
+    /* border: 1px solid red; */
+    border:none;
+    grid-template-columns: 100%;
+    gap: 1.5%;
+  }
+
+  .sebmenu > ul > li{
+    border-bottom: none;
+  }
+  .sebmenu > ul > .center-text-payroll{
+    text-align: left;
+    background-color:white;
+  }
+
+  .main-li i{
+    float: right;
+    margin-right: 20px;
+  }
+  .main-li:hover .sebmenu{
+    display: none;
+  }
+}

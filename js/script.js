@@ -1,12 +1,17 @@
+//covid msg cross
 var cross = document.getElementById("cross");
+var searchAndSign = document.querySelector(".search-and-sign");
       var covidMsg = document.getElementById("covid-msg");
       var navBar = document.getElementById("navbar");
+
       //Cross covid div
       function removeCovidDiv(){
         console.log("hurry")
         covidMsg.style.display = "none"
         navBar.style.maxHeight = "70px"
         // navBar.style.border = "1px solid red"
+        searchAndSign.style.top = "18px"
+        
       }
       cross.addEventListener('click', removeCovidDiv)
 
@@ -204,13 +209,34 @@ var cross = document.getElementById("cross");
 
 
 
-     hamButton = document.getElementById("ham");
-
+    
+    var hamButton = document.getElementById("hamburger");
+    
+    var mainul = document.querySelector(".main-ul") 
+    var hamPresent = 0;
+    function sizeOfWindow(){
+      if(window.innerWidth < 993){
+        hamPresent = 1;
+        // searchAndSign.style.top = "px"
+        searchAndSign.style.right = "70px"
+      } else{
+        hamPresent = 0;
+        navBar.style.height= "110px";
+        navBar.style.width= "100%";
+        searchAndSign.style.right = "26px"
+      }
+    }
 
     function showNavBar(){
-      
+      if(hamPresent == 1){
+        mainul.style.display = "flex";
+        console.log("ham");
+
+        navBar.style.height= "100vh";
+      }
     }
 
 
 
+    window.addEventListener('resize', sizeOfWindow);
      hamButton.addEventListener('click',showNavBar)
