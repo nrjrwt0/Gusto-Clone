@@ -4,18 +4,19 @@
       var covidMsg = document.getElementById("covid-msg");
       var navBar = document.getElementById("navbar");
 
-      console.log(covidMsg);
-      console.log(navBar);
-      //Cross covid div
-      function removeCovidDiv(){
-        console.log("hurry")
-        covidMsg.style.display = "none"
-        navBar.style.maxHeight = "70px"
-        // navBar.style.border = "1px solid red"
-        searchAndSign.style.top = "18px"
-      }
-      console.log(cross)
-      cross.addEventListener('click',removeCovidDiv)
+      // console.log(covidMsg);
+      // console.log(navBar);
+      // //Cross covid div
+      // function removeCovidDiv(){
+      //   console.log("hurry")
+      //   covidMsg.style.display = "none"
+      //   navBar.style.maxHeight = "70px"
+      //   // navBar.style.border = "1px solid red"
+      //   searchAndSign.style.top = "18px"
+      // }
+      // console.log(cross)
+      // // cross.addEventListener('click',removeCovidDiv)
+      // cross.addEventListener('click',removeCovidDiv)
 
 
       var midContBox = document.getElementById("mid-cont-box");
@@ -27,7 +28,7 @@
       var stepCounter = 1;
 
       function backToPrevPage(){
-        console.log(stepCounter);
+        // console.log(stepCounter);
         if(stepCounter == 2){
           stepCounter = stepCounter-1;
           getStartedBtnClick();
@@ -40,14 +41,15 @@
 
 
       function getStartedBtnClick(event){
-        console.log("hurry");
+        // console.log("hurry");
         var steps = document.getElementById('step');
         var back = document.getElementById('back');
 
 
         if(steps != null ){
-          console.log(steps);
-          console.log(back)
+          // console.log(steps);
+          // console.log(back)
+
             steps.remove();
             if(back != null){
               back.remove();
@@ -242,7 +244,7 @@
         ham.setAttribute('class','fas fa-times fa-2x');
       } 
       else{
-        console.log("hi")
+        // console.log("hi")
         mainul.style.display = "none";
         navBar.style.height= "110px";
 
@@ -261,14 +263,15 @@
   var sebmenuCount = 0;
 
   function clickOnNav(event){
-    console.log(event.target);
+    // console.log(event.target);
     var sebmenu = event.target.parentNode.querySelector(" .sebmenu");
-    var arrow = event.target.parentNode.parentNode.querySelector("i")
-    console.log(sebmenu)
-    console.log(arrow)
+    // var arrow = event.target.parentNode.parentNode.querySelector("i")
+    // console.log(sebmenu)
+    // console.log(arrow)
     if(sebmenuCount % 2 == 0){
       sebmenu.style.display = "block";
-      arrow.style.transform= "rotate(225deg)"
+      
+      // arrow.style.transform= "rotate(225deg)"
     } else{
       sebmenu.style.display = "none";
     }
