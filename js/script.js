@@ -189,7 +189,7 @@
           btn1.innerHTML=`<img src="https://clipground.com/images/google-logo-clipart-transparent.png">Sign up with Google`;
 
 
-          btn2.textContent = "Get Started";
+          btn2.innerHTML = `<a href="login.html">Get Started</a>`;
           
           btn1.style.color = "black";
           btn1.style.backgroundColor = "#f8f5f2da";

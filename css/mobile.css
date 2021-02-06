@@ -1,14 +1,15 @@
-@media(max-width:620px){
+@media(max-width:600px){
   #why-gusto-icons{
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
+  margin: auto;
 }
 #mid-cont-box{
   padding: 20px;
 }
 
-#mid-cont-box > h1{
-  font-size: 24px;
+#mid-cont-box h1{
+  font-size: 18px;
 }
 #last-div{
   width: 95%;
@@ -22,6 +23,8 @@ footer > span:first-child, footer > a{
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
+
 }
 @media(max-width:768px){
   #mid-cont-box{
@@ -42,8 +45,8 @@ footer > span:first-child, footer > a{
     line-height: 24px;
   }
   #why-gusto-icons{
-    margin: auto;
-    grid-template-columns: repeat(3, 1fr);
+    
+    /* grid-template-columns: repeat(3, 1fr); */
   }
   
 }
@@ -149,4 +152,16 @@ footer > span:first-child, footer > a{
     max-width: 100%;
   }
 
-}  
+  .blocks{
+    flex-direction: column;
+  }  
+
+  #horiz-line hr{
+    width: 32%;
+  }
+}
+
+
+
+
+
