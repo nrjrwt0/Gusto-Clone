@@ -212,6 +212,10 @@
       z-index: 60;
       outline: none;
     }
+    #mid-cont-box > button > a{
+      color: white;
+      text-decoration: none;
+    }
     #mid-cont-box > h1{
       font-size: 50px;
       font-weight: 550;
@@ -444,10 +448,108 @@
       color:silver;
     }
 
+    
+    #login-wrapper{
+      background-image: url('https://d3bnlkto289wdc.cloudfront.net/assets/illustrations/illo-c-2-person-scene-64506049637bebef1d29708ca19b08a92d09d06cd811fa4547d25278c54f0a99.svg');
+      background-repeat: no-repeat;
+      background-position: 10% 50%;
 
+      /* background-image: url('https://d3bnlkto289wdc.cloudfront.net/assets/illustrations/illo-c-people-with-bouquet-2171606a27029dc6f2496d76351dce12b9b7230ebfab48f32cff12be31b04c4e.svg');
+      background-repeat: no-repeat;
+      background-position: 70% 50%; */
 
-
-
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      justify-content: center;
+      background-color: #F8F5F2;
+    }
+    #google-icon{
+      height:12px;
+      margin-right: 8px;
+    }
+    #login-cont{
+      background-color: white;
+      box-shadow: 3px 3px 3px 3px white;
+      width: 75%;
+      max-width: 500px;
+      height: 88vh;
+      margin: auto;
+      text-align: center;
+      padding: 6px 40px;
+    }
+    #login-cont label,#login-cont input{
+      width: 80%;
+      display: block;
+      /* border: 1px solid red; */
+      margin: auto;
+      height: 40px;
+      font-size: 20px;
+    }
+    #login-cont input{
+      border: none;
+      border-bottom: 1px solid #0B8180;
+      background-color: #F8F5F2;
+      outline: none;
+    }
+    #login-cont input + p{
+      font-size: 17px;
+      margin:8px 40px 15px;
+      color:  #0B8180;
+      width: 80%;
+      text-align: left;
+    }
+    #login-cont label{
+      text-align: left;
+      margin-bottom:2px;
+      margin-top: 20px;
+    }
+    .logo-cont > img{
+      height: 70px;
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+    .login-btn{
+      margin: auto;
+      width: 80%;
+      /* height: 30px; */
+      font-size: 16px;
+      padding: 10px 30px;
+      border-radius: 6px;
+      margin-bottom: 6px;
+      margin-top: 6px;
+      border: 1px solid #0B8180;;
+    }
+    #teal-bg{
+      background-color: #0B8180;
+      color: white;
+      
+    }
+    .small-btn{
+      margin: 16px;
+      display: flex;
+      flex-basis: 50%;
+    }
+    .small-btn + p > a{
+      color: #0B8180;
+    }
+    .small-btn .login-btn{
+      margin: 8px;
+    }
+    
+    #login-cont form + div, #login-cont form + div a{
+      padding:8px 10px;
+      display: flex;
+      color: #0B8180;;
+    }
+    #horiz-line{
+      margin: 10px 0px;
+      /* display: flex; */
+    }
+    #horiz-line hr{
+      width: 37%;
+      display: inline-block;
+    }
 
 
 
@@ -476,9 +578,6 @@
       max-width: 100%;
       min-height: 100%;
     }
-
-
-
 
     #certication .red-font{
       color:  #F35D48;
@@ -525,6 +624,7 @@
       border-radius: 8px;
       padding: 16px 32px;
       margin-top: 20px;
+      outline: none;
     } 
 
     .get-bnt:hover{
