@@ -6,6 +6,7 @@ This project is given to us by Masai School as our first unit project.
 Our Team name is YAMUNA which came from the River YAMUNA.
 
 We have created four pages of this website as well as all the pages are responsive.
+
 0. Gusto landing Page
 1. Pricing Page
 2. Certification Page
