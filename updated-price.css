@@ -203,7 +203,6 @@ ul li {
     height: auto;
     padding-top: 10%;
     padding-bottom: 20%;
-
     min-height: 100vh;
     background-color:#feefe8;
     display: grid;
@@ -380,8 +379,8 @@ p+h4, p+h4+h4, h4+h4{
 
 
 #faqs h2 {
-    font-size: 3em;
-    margin-bottom: 5%;
+    font-size: 2.5em;
+
 }
 #faqs #first-ques span:hover, #faqs #second-ques span:hover{
     color: teal;
@@ -811,9 +810,18 @@ tr td:nth-child(1) {
 
     #extra-benefits{
         padding-bottom: 15%;
-        height: auto;
-        max-height: 500vh;
+        height: 250vh;
+        min-height: 170vh;
+        max-height: 550vh;
+        background-color:#feefe8;
+    }
+    #extra-benefits h4{
+        font-size: 1.5em !important;
 
+    }
+    #item-6 p+h4{
+        display: none;
+        margin-bottom: 10%;
     }
     #tax-advantaged  {
         height: 100vh;
@@ -853,12 +861,18 @@ tr td:nth-child(1) {
         margin-bottom: -20%;
 
     }
+
+    #extra-benefits {
+        /* background-color:green; */
+        height: 60vh;
+    }
     #extra-benefits> div{
         width: 100%;
         margin: auto;
         height: 100vh;
         display:grid;
         gap: 10%;
+        /* background-color: blueviolet; */
         grid-template-columns: 40% 22% 20%;
         grid-template-areas:
                             "b"
@@ -874,11 +888,9 @@ tr td:nth-child(1) {
         height: 25vh;
         max-height: 50vh;
         width: 100vw;
-    }
-    #item-1 h1 {
-        font-size: 2.8em;
-    }
     
+    }
+
     #item-2 {
         grid-area: b;
     }
@@ -1004,5 +1016,96 @@ tr td:nth-child(1) {
     #adv-2 h3,#adv-3 h3 ,#adv-4 h3 ,#adv-1  {
         margin-bottom: 5vh;
     }
-   
+    @media(max-width:680px) {
+    
+        #extra-benefits > div {
+            margin-left: 1%;
+            font-size: 0.8em;
+        }
+        #item-2 h1,#item-3 h1,#item-4 h1,#item-5 h1,#item-6 h1 {
+            margin-bottom: 1vh;
+        }
+    } #item-2 h4+h4,#item-3 h4+h4,#item-4 h4+h4,#item-5 h4+h4,#item-6 h4+h4+h4   {
+        margin-top: 2vh;
+        
+    }
+}
+@media(max-width:600px) {
+    #extra-benefits {
+        /* margin-left: 5%; */
+        width: 100vw;
+        /* background-color:green; */
+    }
+    #extra-benefits > div {
+        margin-left: 1%;
+        font-size: 0.8em;
+    }
+    #item-2 h1,#item-3 h1,#item-4 h1,#item-5 h1,#item-6 h1 {
+        margin-bottom: 1vh;
+    }
+    #item-2 h4+h4,#item-3 h4+h4,#item-4 h4+h4,#item-5 h4+h4   {
+    margin-top: 5vh;
+ }
+    #item-6 h4+h4 {
+        display: none;
+    }
+    #table-container {
+        display: none;
+    }
+    #faq-container {
+        width: 100%;
+        background-color:white;
+        margin-top: 10%;
+        font-size: 1em;
+}
+#extra-benefits{
+    width: 100%;
+    height: 150vh;
+    padding-top: 10%;
+    padding-bottom: 20%;
+    min-height: 100vh;
+    background-color:#feefe8;
+    display: grid;
+}
+#extra-benefits #item-6 ,#item-5 {
+    background-color: #feefe8;
+    padding-bottom: 10vh;
+}
+#tax-advantaged {
+    margin-top: 20%;
+}
+
+#faqs h2 {
+    font-size: 1.5em;
+    margin-bottom: 5%;
+}
+}
+
+@media(max-width:600px) {
+    #faqs {
+        /* background-color: red; */
+        padding-top: 30%;
+
+    }
+    #faqs #first-ques,#faqs #second-ques {
+        /* background-color: red; */
+        font-size: 0.7em;
+        margin-top: 10%;
+    }
+    #tax-advantaged {
+        font-size: 0.9em;
+        height: 100vh;
+    }
+    #tax-advantaged h1+p {
+        margin-top: 5vh;
+    }
+    #price-heading h1{
+        color: red;
+        padding-top: 20%;
+        font-size: 2.5em;
+    }
+    #item-2 > h4+h4, #item-3 > h4+h4, #item-4 h4+h4, #item-5 h4+h4{
+        /* color: green; */
+        padding-top: 5%;
+    }
 }
